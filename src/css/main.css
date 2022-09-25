@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 500ms;
+    transition-property: width margin padding height;
+}
+
+:root {
+    --corMorta: #808080e1;
+    --corClaraCinza: #0000001f;
+    --corPrincipal: #ff7d1b;   
+}
+
+aside.content, aside.buttons {
+    padding: 0 20px;
+}
+
+p#sneaker {
+    margin-top: 20px;
+    letter-spacing: 2px;
+    font-size: 0.7em;
+    font-weight: bolder;
+}
+
+.content > h1 {
+    margin: 10px 0;
+    font-size: 2em;
+}
+
+p#description {
+    line-height: 25px;
+    color: var(--corMorta);
+}
+
+.prices {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0;
+}
+
+.activePrice {
+    display: flex;
+    align-items: center;
+    font-size: 1.7em;
+    font-weight: bolder;
+}
+
+.discountPrice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 7px;
+    margin-left: 20px;
+    font-size: 18px;
+    background-color: rgb(252, 233, 221);
+    border-radius: 5px;
+}
+
+.oldPrice {
+    color: #8080809f;
+    text-decoration: line-through;
+    font-weight: bold;
+}
+
+button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.containerQuantBtns, .addCart {
+    min-width: 90%;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.containerQuantBtns {
+    display:  flex;
+    justify-content: space-between;
+    background-color: rgb(247, 248, 253);
+}
+
+.containerQuantBtns > span {
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+
+.containerQuantBtns > button {
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+.containerQuantBtns > button:active {
+    transform: scale(1.1);
+}
+
+.addCart {
+    box-shadow: 1px 0px 10px #f79951;
+    background-color: var(--corPrincipal);
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.addCart:hover {
+    background-color: #f79951;
+}
+
+@media screen and (min-width: 768px) and (max-width: 922px) {
+    main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 50px;
+    }
+
+    .content {
+        text-align: center;
+    }
+
+    .buttons {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+    }
+
+    .containerQuantBtns {
+        margin-right: 10px;
+    }
+
+    .addCart {
+        margin-left: 10px;
+    }
+
+    .opacity30 {
+        opacity: 30%;
+    }
+}
+
+@media screen and (min-width: 922px) {
+    main {
+        display: flex;
+        justify-content: space-around;
+        padding: 100px 50px;
+    }
+
+    p#sneaker {
+        font-size: 1em;
+    }
+
+    .content h1 {
+        font-size: 2.5em;
+        padding-bottom: 20px;
+    }
+
+    .prices {
+        display: block;
+    }
+
+    .opacity30 {
+        opacity: 30%;
+    }
+
+}
+
+/* Classes para todos */
+
+.hide {
+    display: none;
+}
+
+.contrast {
+    color: var(--corPrincipal)
+}

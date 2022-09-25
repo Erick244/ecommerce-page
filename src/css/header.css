@@ -1,0 +1,226 @@
+header {
+    position: absolute;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    height: 70px;
+    z-index: 1;
+}
+
+.desktopMenu {
+    display: none;
+}
+
+.containerHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#burguerIcon {
+    font-size: 1.3em;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.burguerMenu {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.438);
+    z-index: 1;
+    cursor: pointer;
+    overflow-y: hidden;
+}
+
+.containerMenu {
+    height: 100vh;
+    width: 65vw;
+    position: absolute;
+    padding: 30px;
+    top: 0;
+    background-color: white;
+    cursor: default;
+    animation: openMenuBurguer 0.5s   ease;
+}
+
+@keyframes openMenuBurguer {
+    0% {
+        opacity: 0%;
+        width: 0vw;
+    }
+
+    100% {
+        width: 65vw;
+    }
+}
+
+.hideMenuAnimation {
+    animation: hideMenuBurguer 500ms ease;
+}
+
+@keyframes hideMenuBurguer {
+    0% {
+        opacity: 100%;
+        width: 65vw;
+    }
+
+    100% {
+        opacity: 0%;
+        width: 1vw;
+    }
+}
+
+.closeMenu {
+    width: 30px;
+    text-align: center;
+    font-size: 1.3em;
+    margin-bottom: 60px;
+    color: var(--corMorta);
+    transition: 0.3s all;
+}
+
+.closeMenu:hover {
+    cursor: pointer;
+    color: #000;
+}
+
+.linksMenuBurguer > li {
+    margin-bottom: 20px;
+    list-style: none;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.linksMenuBurguer > li a {
+    display: block;
+    padding: 7px;
+    border-radius: 5px;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 300ms all ease;
+}
+
+.linksMenuBurguer > li a:hover {
+    background-color: var(--corClaraCinza);
+}
+
+.logo {
+    display: flex;
+    flex-grow: 1;
+}
+
+.cart {
+    position: relative;
+    margin-right: 30px;
+    font-size: 1.3em;
+    color: var(--corMorta);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.cart:hover {
+    color: #000;
+}
+
+.quantItens {
+    width: 20px;
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    background-color: var(--corPrincipal);
+    border-radius: 10px;
+}
+
+.profile > img {
+    width: 35px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+
+/* Desktop */
+
+@media screen and (min-width: 768px) {
+    header {
+        max-width: 1200px;
+        height: 100px;
+        position: initial;
+        margin: auto;
+        border-bottom: 1px solid var(--corClaraCinza);
+    }
+
+    .containerHeader {
+        height: 100%;
+        align-items: center;
+    }
+
+    i#burguerIcon {
+        display: none;
+    }
+
+    .logo {
+        margin-right: calc(5% - 20px);
+        margin-left: 10px;
+    }
+
+    .desktopMenu {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-content: flex-start;
+    }
+
+    .desktopMenu > ul {
+        height: 100%;
+        display: flex;
+    }
+
+    .desktopMenu li {
+        height: 100%;
+        margin-right: 25px;
+        list-style: none;
+    }
+
+    .desktopMenu a {
+        height: 100%;
+        display: flex;
+        /* box-sizing: content-box; */
+        align-items: center;
+        color: var(--corMorta);
+        text-decoration: none;
+    }
+
+    .desktopMenu a:hover {
+        border-bottom: 5px solid var(--corPrincipal);
+        color: #000;
+    }
+
+    .cart {
+        margin-right: 45px;
+    }
+
+    .profile {
+        box-sizing: content-box;
+    }
+
+    .profile > img {
+        width: 50px;
+        border-radius: 50%;
+        transition: all 0.1s;
+    }
+
+    .profile > img:hover {
+        border: 2px solid var(--corPrincipal);
+    }
+
+    main {
+        max-width: 1200px;
+        margin: auto;
+    }
+}
